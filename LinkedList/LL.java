@@ -29,7 +29,7 @@ public class LL {
     }
 
     public static void main(String[] args) {
-        Node a= new Node(5);
+        Node a= new Node(5);//head Node
         Node b= new Node(6);
         Node c= new Node(8);
         Node d= new Node(10);
@@ -72,7 +72,13 @@ public class LL {
         // System.out.println(a.next.next.data);//c
         // System.out.println(a.next.next.next.data);//d
         // System.out.println(a.next.next.next.next.data); //d
-        
 
+        Node temp=a;
+      
+        for(int i=0; i<5; i++){
+            System.out.println(temp.data);
+            temp=temp.next;
+        }
     }
+
 }
