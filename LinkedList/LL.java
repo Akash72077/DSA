@@ -1,5 +1,5 @@
 public class LL {
-
+// function to display list with temp variable
     public static void display(Node head){
 
         Node temp=head;
@@ -9,9 +9,37 @@ public class LL {
          }
          System.out.print("null");
     }
+    // function to display linked list without using temp 
+// not ideal for reusable to preserve head function we have to use temp
+    //  public static void display(Node a){
+
+       
+    //     while(a!=null){
+    //        System.out.print(a.data+" -> ");
+    //        a=a.next;  
+    //      }
+    //      System.out.print("null");
+    // }
+
+    public static void displayr(Node head){
+        // display nodes using recusion
+        if(head==null)
+            return;
+          System.out.print(head.data+" -> ");
+          display(head.next);
+    }
+
+    public static void displayReverse(Node head){
+        // display nodes in reverse using recursion 
+        if(head==null)
+            return;
+          display(head.next);
+          System.out.print(head.data+" -> ");
+        
+    }
+
 
     public static class Node{
- 
         // the main draw back of linked list is  it takes memory for both data and address
         //  but the values can be stored any where bcz they all are connected
         // but insertion can be done easily 
@@ -33,18 +61,34 @@ public class LL {
         Node c= new Node(8);
         Node d= new Node(10);
         Node e= new Node(15);
+        Node f= new Node(18);
+        Node g= new Node(11);
+        Node h= new Node(13);
+        Node i= new Node(25);
+        Node j= new Node(150);
        // before linking nodes 
-        // 5  6  8  10  15
+        // 5  6  8  10  15  18  11  13  25  150
         // linking the nodes
+        
         a.next=b; 
-        // 5 -> 6  8  10  15  after linking a to b 
+        // 5 -> 6  8  10  15  18 11 13 25 150 after linking a to b 
         b.next=c;
-         // 5 -> 6 ->  8  10  15
+         // 5 -> 6 ->  8  10  15 18 11 13 25 150
         c.next=d;
-         // 5 -> 6 -> 8 -> 10  15
+         // 5 -> 6 -> 8 -> 10  15 18 11 13 25 150
         d.next=e;
-         // 5 -> 6 -> 8 -> 10 -> 15
-         // last node points to null
+         // 5 -> 6 -> 8 -> 10 -> 15 18 11 13 25 150
+        e.next=f;
+         // 5 -> 6 -> 8 -> 10 -> 15 -> 18 11 13 25 150
+        f.next=g;
+         // 5 -> 6 -> 8 -> 10  -> 15 -> 18 -> 11 13 25 150
+        g.next=h;
+         // 5 -> 6 -> 8 -> 10  -> 15 -> 18 -> 11 -> 13 25 150
+        h.next=i;
+         // 5 -> 6 -> 8 -> 10 -> 15 -> 18 -> 11 -> 13 -> 25  150
+        i.next=j;
+         // 5 -> 6 -> 8 -> 10  -> 15  -> 18 -> 11 -> 13 -> 25 -> 150
+         //  by defualt last node points to null
          // the resultant linked list looks like 
         // 5 -> 6 -> 8 -> 10 -> 15 -> null
         // checking the link of node by checking adresses
@@ -71,7 +115,10 @@ public class LL {
         // System.out.println(a.next.next.next.data);//d
         // System.out.println(a.next.next.next.next.data); //d
         display(a);
-        
+        System.out.println();
+        displayr(a);
+        System.out.println();
+        displayReverse(a);
     }
 
 }
