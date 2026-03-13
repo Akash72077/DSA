@@ -35,9 +35,17 @@ public class LL {
             return;
           display(head.next);
           System.out.print(head.data+" -> ");
-        
     }
 
+    public static int length(Node head){
+         Node temp=head;
+         int count=0;
+        while(temp!=null){
+           count++;
+           temp=temp.next;  
+         }
+         return count;    
+    }
 
     public static class Node{
         // the main draw back of linked list is  it takes memory for both data and address
@@ -54,7 +62,6 @@ public class LL {
         this.next= null; // tail
     }
     }
-
     public static void main(String[] args) {
         Node a= new Node(5);//head Node
         Node b= new Node(6);
@@ -69,7 +76,6 @@ public class LL {
        // before linking nodes 
         // 5  6  8  10  15  18  11  13  25  150
         // linking the nodes
-        
         a.next=b; 
         // 5 -> 6  8  10  15  18 11 13 25 150 after linking a to b 
         b.next=c;
@@ -114,11 +120,14 @@ public class LL {
         // System.out.println(a.next.next.data);//c
         // System.out.println(a.next.next.next.data);//d
         // System.out.println(a.next.next.next.next.data); //d
-        display(a);
-        System.out.println();
-        displayr(a);
-        System.out.println();
-        displayReverse(a);
+        // display(a);
+        // System.out.println();
+        // displayr(a);
+        // System.out.println();
+        // displayReverse(a);
+        //System.out.println();
+        int len=length(a);
+        System.out.println(len);
     }
 
 }
