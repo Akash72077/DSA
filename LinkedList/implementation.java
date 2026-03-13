@@ -13,6 +13,8 @@ public static class linkedlist{
             int size=0;
         void deleteAtFirst(){
             head=head.next;
+            size--;
+            return;
         }
         void deleteAtIndex(int idx){
             if(idx==0){
