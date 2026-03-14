@@ -1,5 +1,5 @@
 public class implementation {  //implementation of linked lsist
-    public static class Node{
+    public static class Node{//defining linked list
     int data;
     Node next;
     public Node(int data){
@@ -7,7 +7,7 @@ public class implementation {  //implementation of linked lsist
     }
 }
 
-public static class linkedlist{
+public static class linkedlist{ 
             Node head=null;
             Node tail=null;
             int size=0;
