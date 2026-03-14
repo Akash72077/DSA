@@ -1,4 +1,4 @@
-public class implementation {  
+public class implementation {  //implementation of linked lsist
     public static class Node{
     int data;
     Node next;
