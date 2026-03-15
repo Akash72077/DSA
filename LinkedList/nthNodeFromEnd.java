@@ -1,5 +1,21 @@
 public class nthNodeFromEnd {
 
+    
+    public static Node nthNode(Node head, int n){
+            int size=0;
+            Node temp=head;
+            while (temp!=null) {
+                size++;
+                temp=temp.next;   
+            }
+            temp=head;
+            for(int i=1; i<size-n+1; i++){
+                 temp=temp.next;
+            }
+            return temp;
+
+    }
+
     public static class Node{  // defining nodes
         int data;
         Node next;
@@ -24,8 +40,11 @@ public class nthNodeFromEnd {
             c.next=d;
             d.next=e;
             e.next=f;
-            f.next=f;
+            f.next=g;
             g.next=h;
+            //5 10 15 20 30 24 50 90
+            Node q=nthNode(a,4);
+            System.out.println(q.data);
             
 
     }
