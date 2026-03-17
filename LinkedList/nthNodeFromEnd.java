@@ -59,7 +59,7 @@ public class nthNodeFromEnd {
             f.next=g;
             g.next=h;
             //5 10 15 20 30 24 50 90
-            Node q=nthNode(a,4);
+            //Node q=nthNode(a,4);
            // System.out.println(q.data);       
             System.out.println(nthNodeTwoPointer(2, a).data);
     }
