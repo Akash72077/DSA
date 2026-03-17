@@ -56,6 +56,18 @@ public class LL {
          return count;    
     }
 
+    public static boolean isExist(Node head, int n){
+            Node temp =head;
+            while (temp!=null) {
+                if(temp.data==n){
+                    return true;
+                }
+                temp=temp.next;
+            }
+            return false;
+
+
+    }
     public static class Node{
         // the main draw back of linked list is  it takes memory for both data and address
         //  but the values can be stored any where bcz they all are connected
@@ -140,6 +152,9 @@ public class LL {
 
         insertAtEnd(a,80);
         display(a);
+        System.out.println();
+        System.out.println(isExist(a, 25));
+        System.out.println(isExist(a,64));
     }
 
 }
