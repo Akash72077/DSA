@@ -31,7 +31,7 @@ public static class linkedlist{
         }
             void insertAtEnd(int value){
                 Node temp=new Node(value);
-                if(head==null ){
+                if(head==null ){ // if Linked list is empty then new node will acts as both head and tail
                     head=temp;
                     tail=temp;
                 }
