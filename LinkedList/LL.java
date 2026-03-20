@@ -53,7 +53,7 @@ public class LL {
            count++;
            temp=temp.next;  
          }
-         return count;    
+         return count;    //O(n)
     }
 
     public static boolean isExist(Node head, int n){
@@ -69,7 +69,7 @@ public class LL {
         public static int Findindex(Node head, int n){
             Node temp=head;
             int count=0;
-             while (temp!=null) {
+             while (temp!=null) {//stops program when it reaches to null
                 if(temp.data==n){
                     return count;
                 }
