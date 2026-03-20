@@ -39,7 +39,7 @@ public static class linkedlist{
                 tail.next=temp;
                 tail=temp;
                 }
-                size++;
+                size++; //update size when ever an element is added at end 
             }
             void display(){
             Node temp= head;
