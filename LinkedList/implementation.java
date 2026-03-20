@@ -45,7 +45,7 @@ public static class linkedlist{
             Node temp= head;
             while(temp!=null){ // the loop running will break after reaching null 
                 System.out.print(temp.data+" ");
-                temp=temp.next;
+                temp=temp.next; 
             }
         }
             int size(){///    O(n)
