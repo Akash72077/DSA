@@ -26,7 +26,7 @@ public static class linkedlist{
             }
             temp.next=temp.next.next; // link the node with next next element the next element is removed
             tail=temp;
-            size--;
+            size--; // decrease the size after removing an element
 
         }
             void insertAtEnd(int value){
