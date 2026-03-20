@@ -43,7 +43,7 @@ public static class linkedlist{
             }
             void display(){
             Node temp= head;
-            while(temp!=null){
+            while(temp!=null){ // the loop running will break after reaching null 
                 System.out.print(temp.data+" ");
                 temp=temp.next;
             }
