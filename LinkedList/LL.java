@@ -2,7 +2,7 @@ public class LL {
  
     public static void insertAtEnd(Node head , int value){
         Node temp=new Node(value);
-        Node t=head;
+        Node t=head;// creating a temp node with data type of node 
         while (t.next!=null) { //stops program when it reaches to null
             t=t.next;
         }
