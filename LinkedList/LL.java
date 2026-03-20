@@ -3,7 +3,7 @@ public class LL {
     public static void insertAtEnd(Node head , int value){
         Node temp=new Node(value);
         Node t=head;
-        while (t.next!=null) {
+        while (t.next!=null) { //stops program when it reaches to null
             t=t.next;
         }
           t.next=temp;

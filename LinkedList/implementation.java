@@ -13,7 +13,7 @@ public static class linkedlist{
         int size=0;
                  void deleteAtFirst(){
             head=head.next;
-            size--;
+            size--; // automatically updates size when delete operations happens
             return;
         }
         void deleteAtIndex(int idx){
@@ -70,7 +70,9 @@ public static class linkedlist{
                     temp.next=head;
                     head=temp;
                 }
+
                 size++;// increase the size when ever an element is inserted
+
         }
         void insertAt(int idx,int value){
             if(idx==size()){  // if index postion is last then head will be not updated so we have to insert using insert at end function 
